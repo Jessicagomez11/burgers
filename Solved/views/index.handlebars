@@ -9,8 +9,8 @@
 
   <div class="form-group">
     <label for="sleepy">Eaten?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Eaten!<br>
-    <input type="radio" name="sleepy" value="0"> Not eaten
+    <input type="radio" name="sleepy" value="1" > Eaten!<br>
+    <input type="radio" name="sleepy" value="0" checked> Not eaten
   </div>
 
   <button type="submit">Add Burger</button>
@@ -20,7 +20,7 @@
 <h2>BURGERS</h2>
 
 <ul>
-  {{#each cats}}
+  {{#each burgers}}
     {{#unless sleepy}}
       {{> cats/cat-block sleep=true}}
     {{/unless}}
@@ -30,7 +30,7 @@
 <h2>BURGERS THAT HAVE BEEN EATEN</h2>
 
 <ul>
-  {{#each cats}}
+  {{#each burgers}}
     {{#if sleepy}}
       {{> cats/cat-block sleep=false}}
     {{/if}}

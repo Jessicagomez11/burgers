@@ -2,14 +2,14 @@
 <li>
 	{{name}}
 
-	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+	<button class="change-if-eaten" data-id="{{id}}" data-newsleep="{{sleep}}">
 	{{!-- <button class="change-sleep" data-id="{{id}}" data-newdevoured="{{devoured}}"> --}} 
 		{{#if sleep}}
 		EAT IT!!
 		{{else}}
-		WAKE UP!
+		RESTOCK
 		{{/if}}
 	</button>
 
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
 </li>

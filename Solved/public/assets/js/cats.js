@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".change-sleep").on("click", function(event) {
+  $(".change-if-eaten").on("click", function(event) {
     var id = $(this).data("id");
     var newSleep = $(this).data("newsleep");  
     // var newDevoured = $(this).data("newDevoured"); ---------------------------> HERE
@@ -30,7 +30,7 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newCat = {
+    var newBurger = {
       name: $("#ca").val().trim(),
       sleepy: $("[name=sleepy]:checked").val().trim()
       // devoured: $("[name=devoured]:checked").val().trim()   ---------------------------> HERE
@@ -41,7 +41,7 @@ $(function() {
     $.ajax("/api/burgers", {
       type: "POST",
       // data: newCat  ---------------------------> HERE
-      data: newCat
+      data: newBurger
     }).then(
       function() {
         console.log("created new cat");
@@ -51,7 +51,7 @@ $(function() {
     );
   });
 
-  $(".delete-cat").on("click", function(event) {
+  $(".delete-burger").on("click", function(event) {
     var id = $(this).data("id");
 
     // Send the DELETE request.
@@ -59,7 +59,7 @@ $(function() {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted cat", id);
+        console.log("deleted burger", id);
         // Reload the page to get the updated list
         location.reload();
       }
