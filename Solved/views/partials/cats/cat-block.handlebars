@@ -1,0 +1,15 @@
+{{!-- THIS FILE CREATES NEW BUTTONS TO WAKE UP OR DELETE THE CAT --}}
+<li>
+	{{name}}
+
+	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+	{{!-- <button class="change-sleep" data-id="{{id}}" data-newdevoured="{{devoured}}"> --}} 
+		{{#if sleep}}
+		EAT IT!!
+		{{else}}
+		WAKE UP!
+		{{/if}}
+	</button>
+
+	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+</li>
