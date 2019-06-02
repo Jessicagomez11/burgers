@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var burger = require("../models/cat.js");
+var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -18,10 +18,10 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "sleepy" 
-    // "name", "devoured" -------------> HERE
+    // "name", "sleepy" ---------------------------> HERE
+    "burger_name", "devoured"  
   ], [
-    req.body.name, req.body.sleepy 
+    req.body.burger_name, req.body.devoured
     // req.body.name, req.body.devoured -------------> HERE
   ], function(result) {
     // Send back the ID of the new quote
@@ -35,7 +35,7 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.update({
-    sleepy: req.body.sleepy
+    devoured: req.body.devoured
     // devoured: req.body.devoured -------------> HERE
   }, condition, function(result) {
     if (result.changedRows == 0) {

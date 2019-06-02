@@ -1,10 +1,10 @@
 {{!-- THIS FILE CREATES NEW BUTTONS TO WAKE UP OR DELETE THE CAT --}}
 <li>
-	{{name}}
+	{{burger_name}}
 
-	<button class="change-if-eaten" data-id="{{id}}" data-newsleep="{{sleep}}">
+	<button class="change-if-eaten" data-id="{{id}}" data-newsleep="{{notEaten}}">
 	{{!-- <button class="change-sleep" data-id="{{id}}" data-newdevoured="{{devoured}}"> --}} 
-		{{#if sleep}}
+		{{#if notEaten}}
 		EAT IT!!
 		{{else}}
 		RESTOCK

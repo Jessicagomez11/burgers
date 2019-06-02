@@ -6,7 +6,7 @@ $(function() {
     // var newDevoured = $(this).data("newDevoured"); ---------------------------> HERE
 
     var newSleepState = {
-      sleepy: newSleep  
+      devoured: newSleep  
       // devoured: newDevoured ---------------------------> HERE
     };
 
@@ -31,9 +31,9 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
-      // devoured: $("[name=devoured]:checked").val().trim()   ---------------------------> HERE
+      burger_name: $("#ca").val().trim(),
+      // sleepy: $("[name=sleepy]:checked").val().trim()  ---------------------------> HERE
+      devoured: $("[name=devoured]:checked").val().trim()  
    
     };
 
