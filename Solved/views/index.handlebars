@@ -16,7 +16,7 @@
   <button type="submit">Add Burger</button>
 </form>
 
-
+<div id="notEatenDiv">
 <h2>BURGERS</h2>
 
 <ul>
@@ -26,7 +26,9 @@
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
+<div id="eatenDiv">
 <h2>BURGERS THAT HAVE BEEN EATEN</h2>
 
 <ul>
@@ -36,3 +38,5 @@
     {{/if}}
   {{/each}}
 </ul>
+
+</div>
